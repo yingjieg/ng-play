@@ -1,0 +1,8 @@
+<p>todo-list-item works!</p>
+<p>Title: {{ taskTitle }}</p>
+
+@if(isComplete) {
+<div>Task Complete can see</div>
+}
+
+<button (click)="saveChanges()">Save</button>

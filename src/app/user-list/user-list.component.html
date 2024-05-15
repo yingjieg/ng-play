@@ -1,0 +1,12 @@
+<p>user-list works!</p>
+<p>Books: {{ store.books() | json }}</p>
+<p>Loading: {{ store.loading() }}</p>
+
+<!-- 👇 The `DeepSignal` value can be read in the same way as `Signal`. -->
+<p>Pagination: {{ store.filter() | json }}</p>
+
+<!-- 👇 Nested signals are created as `DeepSignal` properties. -->
+<p>Query: {{ store.filter.query() }}</p>
+<p>Order: {{ store.filter.order() }}</p>
+
+<app-todo-list></app-todo-list>

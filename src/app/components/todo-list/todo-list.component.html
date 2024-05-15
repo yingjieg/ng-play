@@ -1,0 +1,13 @@
+<p>todo-list works!</p>
+
+<ul>
+  @for (item of taskList; track item.title) {
+  <li>{{ item.title }}</li>
+  }
+</ul>
+
+<input type="text" [formControl]="newTask" />
+@if (newTask.invalid) {
+<p>do not empty</p>
+}
+<button (click)="addTask()">Add</button>
